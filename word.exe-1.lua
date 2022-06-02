@@ -18,59 +18,59 @@ function patch(offset,replaced)
 -----------------------------------il2cpp Base Address---------------------------------------------------
 gg.setRanges(gg.REGION_CODE_APP)
 -- copy header from ur libil2cpp
-gg.searchNumber("h7F 45 4C 46 02 01 01 00 00 00 00 00 00 00 00 00 03 00 B7 00 01 00 00 00 90 E2 73 00 00 00 00 00 40 00 00 00 00 00 00 00 90 A6 AF 02 00 00 00 00", gg.TYPE_BYTE)
+gg.searchNumber("h7F 45 4C 46 02 01 01 00 00 00 00 00 00 00 00 00 03 00 B7 00 01 00 00 00 20 EF 72 00 00 00 00 00 40 00 00 00 00 00 00 00 10 8F AA 02 00 00 00 00", gg.TYPE_BYTE)
 rCount = gg.getResultCount()
 if rCount == 0 then return gg.alert("Can't get libil2cpp base offset") end
 BaseAddress = gg.getResults(rCount)[1].address
 gg.clearResults()
 
 -- Declaration Of Offsets
-bypass = 0xA0B04C
-bypass1 = 0xA09A80
-bypass2 = 0xA0BB4C
-bypass3 = 0xA0A20C
-bypass4 = 0xA0BC4C 
-bypass5 = 0xA0AD4C
-bypass6 = 0xA0A31C
-bypass7 = 0xA0B44C
-bypass8 = 0xA0B84C
-bypass9 = 0xA0A42C
-bypass10 = 0xA0A0FC
-bypass11 = 0xA0A74C
-bypass12 = 0xA09FEC
-bypass13 = 0xA0A94C 
-bypass14 = 0xA09EDC 
-bypass15 = 0xA09B1C
-bypass16 = 0xA0BD4C
-bypass17 = 0xA0BA4C
-bypass18 = 0xA0B54C
-bypass19 = 0xA0A64C
-bypass20 = 0xA09DCC
-bypass21 = 0xA0B74C
-bypass22 = 0xA0AA4C
-bypass23 = 0xA09C94
-bypass24 = 0xA0A53C
-bypass25 = 0xA09CCC
-bypass26 = 0xA0B14C
-bypass27 = 0xA0AC4C
-bypass28 = 0xA0B34C
-bypass29 = 0xA0B64C
-bypass30 = 0xA0AB4C
-bypass31 = 0xA0AE4C
-bypass32 = 0xA0AF4C
-bypass33 = 0xA0B24C
-bypass34 = 0xA0B94C 
-bypass35 = 0xD4C5D0 
-bypass36 = 0xC887A4 --anti 
-bypass37 = 0xC87448
-bypass38 = 0xC880C4
-bypass39 = 0xC87878
-bypass40 = 0xC884E0
-bypass41 = 0xC87D54
-bypass42 = 0xC87A90
-bypass43 = 0xC87660
-bypass44 = 0xAF0F34 --setsessiontoheaders
-bypass45 = 0xAF105C --getsessiontoken
+bypass = 0x9F3308
+bypass1 = 0x9F4988
+bypass2 = 0x9F3A78
+bypass3 = 0x9F3E88
+bypass4 = 0x9F4688
+bypass5 = 0x9F3858
+bypass6 = 0x9F3968
+bypass7 = 0x9F4A88
+bypass8 = 0x9F4788
+bypass9 = 0x9F3058
+bypass10 = 0x9F4D88
+bypass11 = 0x9F4888
+bypass12 = 0x9F3F88
+bypass13 = 0x9F4188
+bypass14 = 0x9F3748 
+bypass15 = 0x9F3528
+bypass16 = 0x9F4E88
+bypass17 = 0x9F3D88
+bypass18 = 0x9F3638
+bypass19 = 0x9F4C88
+bypass20 = 0x9F4488
+bypass21 = 0x9F4288
+bypass22 = 0x9F4088
+bypass23 = 0x9F4588
+bypass24 = 0x9F31D0
+bypass25 = 0x9F3B88
+bypass26 = 0x9F3418
+bypass27 = 0x9F3208
+bypass28 = 0x9F4388
+bypass29 = 0x9F4B88
+bypass30 = 0x9F3C88
+bypass31 = 0x9F2FBC
+bypass32 = 0xCD7CDC 
+bypass33 = 0xC694C8 --anti
+bypass34 = 0xC68984
+bypass35 = 0xC694C8
+bypass36 = 0xC687CC
+bypass37 = 0xC68B3C
+bypass38 = 0xC68F90
+bypass39 = 0xC68614
+bypass40 = 0xC68D40
+bypass41 = 0xC69278
+bypass42 = 0xDEDC68 --setsessiontoheaders
+bypass43 = 0xDEDD90 --getsessiontoken
+bypass44 = 0xAF0F34 
+bypass45 = 0xAF105C 
 bypass46 = 0x9FA1D0
 bypass47 = 0x9F8FA0
 bypass48 = 0x9F98C0
@@ -128,33 +128,33 @@ bypass99 = 0xA67BC8
 bypass100 = 0xA67BA8
 
 
-get_crosshair = 0xBEE954
-get_height = 0x1E84258
+get_crosshair = 0xBE8A04
+get_height = 0x1E4B318
 linecast = 0x1E85FBC
 linecast2 = 0x1E85EE0
-isvisible = 0x107112C
-applyrecoil = 0x10701AC
-updatespread = 0x10700B4
-applyaimpunch = 0x10702C8
-get_suppressor = 0xBEEAF0
-raycastgrenade = 0xAAE600
-explodegrenade = 0xAA0FE0
-set_spread = 0xE170C4
-handlecrouching = 0xBEC098
-getcapsuleparameters = 0xE8B014
-setkillnotification = 0xD8FCE8
-updatecollider = 0xAAFEB8
-getcurrentmaxspeed = 0x106FD1C
-practicestage = 0xD8837C
-gameplaystage = 0xD882F8
-menustage = 0xD87A04
-setbombtimer = 0xC5BA44
+isvisible = 0xFDEBD0
+applyrecoil = 0xFDDC44
+updatespread = 0xFDDB4C
+applyaimpunch = 0xFDDD60
+get_suppressor = 0xBE8BA0
+raycastgrenade = 0xA7FEE4
+explodegrenade = 0xD072D8
+set_spread = 0xE6D718
+handlecrouching = 0xC91984
+getcapsuleparameters = 0xE4B048
+setkillnotification = 0xF92308
+updatecollider = 0xA81794
+getcurrentmaxspeed = 0xFDD7D4
+practicestage = 0xB13D98
+gameplaystage = 0xB13D14
+menustage = 0xB0C6C0
+setbombtimer = 0xBE66AC
 espradar = 0xCB8F6C
-processwallhits = 0xAB5E00
-isreloadingpossible = 0xE88E98
+processwallhits = 0xA878B0
+isreloadingpossible = 0xE48F00
 test = 0xCAE318
 test1 = 0xCAE35C
-setgamedata = 0xAB8D54
+setgamedata = 0xA8A650
 
 
 
@@ -199,7 +199,7 @@ local menu = gg.choice({
       "Skin Changer",
       "ViewModel Changer",
       "EXIT"},
-nil,"Critical Ops Mod Menu By Sexy Ass xycro#8113")
+nil,"Critical Ops Mod Menu By xycro#8113")
 
 if menu == nil then gg.toast("minimize menu")
 elseif
@@ -1593,9 +1593,7 @@ function hackmenu4()
                patch(bypass41,false1)
                patch(bypass42,false1)
                patch(bypass43,false1)
-               patch(bypass44,false1)
-               patch(bypass45,false1)
-
+               
                gg.toast("Memory Check Disabled")
             end
             
