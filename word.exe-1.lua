@@ -909,8 +909,10 @@ gg.setValues(incaa)
 gg.getListItems(incaa)
 incaa[11].flags = gg.TYPE_FLOAT
 incaa[11].value = "9999999999"
-gg.setValues(incaa)			
+gg.setValues(incaa)
 			
+gg.clearResults()			
+gg.toast("Increased Aim Assist")			
 end
 
 if menu[12] == true then
