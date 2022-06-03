@@ -648,15 +648,15 @@ local menu  = gg.multiChoice({
      "30 Burst Shots",
      "Speed [K] [U]",
      "Crouch Speed [K] [U]",
-     "Change User Type",
-     "ViewModel X Changer",
-     "Hack 1",
+     "Change User Type {U}",
+     "ViewModel X Changer {U}",
+     "Increased Aim Assist {U}",
      "Hack 2",
      "Hack 3",
      "Hack 4",
      "Hack 5",
      "BACK"},
-nil,"Hack Menu")
+nil,"Misc")
 
 
 --cancel
@@ -860,8 +860,57 @@ gg.toast("ViewModel X Changed")
 end
 
 if menu[11] == true then
---put your hack here
-gg.alert("Hack 5 Done")
+gg.setRanges(gg.REGION_ANONYMOUS)
+ gg.searchNumber("0.30099859834F;1.0F;0.51376193762F;0.5F;1.0F;0.25F;0.51376193762F;0.30000001192F;1.0F;3.05504775047F;2.5F;0.12025338411F;0.11999999732F:133",gg.TYPE_FLOAT)
+ gg.getResults(13)
+ incaa = gg.getResults(13)
+ gg.addListItems(incaa)
+			
+gg.getListItems(incaa)
+incaa[1].flags = gg.TYPE_FLOAT
+incaa[1].value = "9999999999"
+gg.setValues(incaa)
+			
+gg.getListItems(incaa)
+incaa[2].flags = gg.TYPE_FLOAT
+incaa[2].value = "9999999999"
+gg.setValues(incaa)
+			
+gg.getListItems(incaa)
+incaa[4].flags = gg.TYPE_FLOAT
+incaa[4].value = "9999999999"
+gg.setValues(incaa)
+			
+gg.getListItems(incaa)
+incaa[5].flags = gg.TYPE_FLOAT
+incaa[5].value = "9999999999"
+gg.setValues(incaa)	
+			
+gg.getListItems(incaa)
+incaa[6].flags = gg.TYPE_FLOAT
+incaa[6].value = "9999999999"
+gg.setValues(incaa)
+			
+gg.getListItems(incaa)
+incaa[7].flags = gg.TYPE_FLOAT
+incaa[7].value = "9999999999"
+gg.setValues(incaa)		
+			
+gg.getListItems(incaa)
+incaa[8].flags = gg.TYPE_FLOAT
+incaa[8].value = "9999999999"
+gg.setValues(incaa)		
+			
+gg.getListItems(incaa)
+incaa[10].flags = gg.TYPE_FLOAT
+incaa[10].value = "9999999999"
+gg.setValues(incaa)
+			
+gg.getListItems(incaa)
+incaa[11].flags = gg.TYPE_FLOAT
+incaa[11].value = "9999999999"
+gg.setValues(incaa)			
+			
 end
 
 if menu[12] == true then
