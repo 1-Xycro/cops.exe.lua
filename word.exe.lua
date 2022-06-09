@@ -18,7 +18,7 @@ function patch(offset,replaced)
 -----------------------------------il2cpp Base Address---------------------------------------------------
 gg.setRanges(gg.REGION_CODE_APP)
 -- copy header from ur libil2cpp
-gg.searchNumber("h7F 45 4C 46 02 01 01 00 00 00 00 00 00 00 00 00 03 00 B7 00 01 00 00 00 20 EF 72 00 00 00 00 00 40 00 00 00 00 00 00 00 10 8F AA 02 00 00 00 00", gg.TYPE_BYTE)
+gg.searchNumber("h7F 45 4C 46 02 01 01 00 00 00 00 00 00 00 00 00 03 00 B7 00 01 00 00 00 30 EF 72 00 00 00 00 00 40 00 00 00 00 00 00 00 C0 AD AA 02 00 00 00 00", gg.TYPE_BYTE)
 rCount = gg.getResultCount()
 if rCount == 0 then return gg.alert("Can't get libil2cpp base offset") end
 BaseAddress = gg.getResults(rCount)[1].address
@@ -128,33 +128,33 @@ bypass99 = 0xA67BC8
 bypass100 = 0xA67BA8
 
 
-get_crosshair = 0xBE8A04
-get_height = 0x1E4B318
-linecast = 0x1E4CFA0
-linecast2 = 0x1E4D07C
-isvisible = 0xFDEBD0
-applyrecoil = 0xFDDC44
-updatespread = 0xFDDB4C
-applyaimpunch = 0xFDDD60
-get_suppressor = 0xBE8BA0
-raycastgrenade = 0xA7FEE4
-explodegrenade = 0xD072D8
-set_spread = 0xE6D718
-handlecrouching = 0xC91984
-getcapsuleparameters = 0xE4B048
-setkillnotification = 0xF92308
-updatecollider = 0xA81794
-getcurrentmaxspeed = 0xFDD7D4
-practicestage = 0xB13D98
-gameplaystage = 0xB13D14
-menustage = 0xB0C6C0
-setbombtimer = 0xBE66AC
+get_crosshair = 0xBE9A60
+get_height = 0x1E4E140
+linecast = 0x1E4FEA4
+linecast2 = 0x1E4FDC8
+isvisible = 0xFDAC48
+applyrecoil = 0xFD9CBC
+updatespread = 0xFD9BC4
+applyaimpunch = 0xFD9DD8
+get_suppressor = 0xBE9BFC
+raycastgrenade = 0xA7FF40
+explodegrenade = 0xD07334
+set_spread = 0xE69774
+handlecrouching = 0xC929E0
+getmaterialforcollider = 0xA85B58
+setmessage = 0xF8CEE0
+updatecollider = 0xA817F0
+getcurrentmaxspeed = 0xFD984C
+practicestage = 0xB15DF4
+gameplaystage = 0xB15D70
+menustage = 0xB0E71C
+setbombtimer = 0xBE8708
 espradar = 0xCB8F6C
-processwallhits = 0xA878B0
-isreloadingpossible = 0xE48F00
+processwallhits = 0xA8790C
+isreloadingpossible = 0xE44F5C
 test = 0xCAE318
 test1 = 0xCAE35C
-setgamedata = 0xA8A650
+setgamedata = 0xA8A6AC
 
 
 
@@ -543,7 +543,7 @@ end
 
 if menu[20] == true then
 
-patch(getcapsuleparameters,false1) 
+patch(getmaterialforcollider,false1) 
 
 gg.toast("Noclip")
 end
@@ -557,7 +557,7 @@ end
 
 if menu[22] == true then
 
-patch(setkillnotification,false1) 
+patch(setmessage,false1) 
 
 gg.toast("Killfeed Spoofer")
 end
