@@ -25,19 +25,19 @@ BaseAddress = gg.getResults(rCount)[1].address
 gg.clearResults()
 
 -- Declaration Of Offsets
-bypass = 0xC687DC
-bypass1 = 0xC68F54
-bypass2 = 0xC6923C
-bypass3 = 0xC69690
-bypass4 = 0xC67A00
-bypass5 = 0xC68D50
-bypass6 = 0xC69524
-bypass7 = 0xC69440
-bypass8 = 0xC66E5C
-bypass9 = 0xC69774
-bypass10 = 0xC68828
-bypass11 = 0xC68670
-bypass12 = 0xC68598
+bypass = 0xC69524
+bypass1 = 0xC685E4
+bypass2 = 0xCD7D38
+bypass3 = 0x9F4264
+bypass4 = 0xDEACC4
+bypass5 = 0xDEADEC
+bypass6 = 0xC68FEC
+bypass7 = 0xC692D4
+bypass8 = 0xC69524
+bypass9 = 0xCD7D38
+bypass10 = 0x9F4264
+bypass11 = 0xDEACC4
+bypass12 = 0xDEADEC
 bypass13 = 0xC696DC
 bypass14 = 0xC69288 
 bypass15 = 0xC6948C
@@ -1589,45 +1589,12 @@ function hackmenu4()
             if menu[1] == true then
                patch(bypass,false1)
                patch(bypass1,false1)
-               patch(bypass2,false1)  
-               patch(bypass3,false1)  
+               patch(bypass2,false1)
+               patch(bypass3,false1)
                patch(bypass4,false1)
                patch(bypass5,false1)
-               patch(bypass6,false1) 
-               patch(bypass7,false1)
-               patch(bypass8,false1)
-               patch(bypass9,false1)  
-               patch(bypass10,false1)  
-               patch(bypass11,false1)  
-               patch(bypass12,false1)  
-               patch(bypass13,false1)  
-               patch(bypass14,false1)
-               patch(bypass15,false1)
-               patch(bypass16,false1)
-               patch(bypass17,false1)
-               patch(bypass18,false1)
-               patch(bypass19,false1)
-               patch(bypass20,false1)
-               patch(bypass21,false1)
-               patch(bypass22,false1)
-               patch(bypass23,false1)
-               patch(bypass24,false1)
-               patch(bypass25,false1)
-               patch(bypass26,false1)
-               patch(bypass27,false1)
-               patch(bypass28,false1)
-               patch(bypass29,false1)
-               patch(bypass30,false1)
-               patch(bypass31,false1)
-               patch(bypass32,false1)
-               patch(bypass33,false1)
-               patch(bypass34,false1)
-               patch(bypass35,false1)
-               patch(bypass36,false1)
-               patch(bypass37,false1)
-               patch(bypass38,false1)
+
               
-               
                gg.toast("Memory Check Disabled")
             end
             
