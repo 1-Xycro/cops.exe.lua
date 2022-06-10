@@ -155,7 +155,10 @@ isreloadingpossible = 0xE44F5C
 test = 0xCAE318
 test1 = 0xCAE35C
 setgamedata = 0xA8A6AC
-
+body = 0xA881B8 + 0xD4
+head = 0xA881B8 + 0xE8
+stw = 0xA87C64 + 0xD8
+stw2 = 0xA87C64 + 0xEC
 
 
 
@@ -175,6 +178,7 @@ radar1 = "60 01 08 36"
   float5 = "0090221EC0035FD6"
   float10 = "0090241E"
   float14 = "0090251EC0035FD6"
+  float20 = "0090261E"
   float24 = "0010271EC0035FD6"
   float31 = "00F0271EC0035FD6"
   nop1 = "1F 20 03 D5"
@@ -420,20 +424,12 @@ end
 
 
 if menu[7] == true then
-  gg.setRanges(gg.REGION_CODE_APP)
-  gg.searchNumber("hE0 03 27 1E 22 1D A9 4E 09 BC 27 94", gg.TYPE_BYTE, false, gg.SIGN_EQUAL, 0, -1)
-  gg.getResults(4)
-  gg.editAll("h0090261E", gg.TYPE_BYTE)
-  gg.clearResults()
+  patch(body,float20)
   gg.toast("Increased Body Hitbox")
 end
 
 if menu[8] == true then
-gg.setRanges(gg.REGION_CODE_APP)
-gg.searchNumber("hE0 03 27 1E 22 1D A9 4E E0 03 1F AA", gg.TYPE_BYTE, false, gg.SIGN_EQUAL, 0, -1)
-gg.getResults(4)
-gg.editAll("h0090261E", gg.TYPE_BYTE)
-gg.clearResults()
+patch(head,float20)
 gg.toast("Increased Head Hitbox")
 end
 
@@ -522,12 +518,8 @@ end
 
 if menu[18] == true then
 
-  gg.setRanges(gg.REGION_CODE_APP)
-  gg.searchNumber("h00 20 21 1E 85 10 00 54 C8 22 40 F9", gg.TYPE_BYTE, false, gg.SIGN_EQUAL, 0, -1)
-  gg.getResults(4)
-  gg.editAll("h1F 20 03 D5", gg.TYPE_BYTE)
-  gg.clearResults()
-  
+  patch(stw,nop1) 
+  patch(stw2,nop1)
   patch(isvisible,true1) 
 
 gg.toast("stw no kick")
